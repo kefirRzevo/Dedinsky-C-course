@@ -1,0 +1,88 @@
+#include "include/dump.h"
+#include "include/list.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  list lst = {};
+  list_ctor(&lst);
+  list_dump(&lst);
+  list_insert(&lst, 0, 10);
+  list_dump(&lst);
+  list_insert(&lst, 1, 20);
+  list_insert(&lst, 2, 30);
+  list_insert(&lst, 3, 40);
+  list_insert(&lst, 4, 60);
+  list_insert(&lst, 2, 50);
+  list_insert(&lst, 2, 55);
+  list_insert(&lst, 0, 10);
+  list_insert(&lst, 1, 20);
+  list_delete(&lst, 8);
+  list_delete(&lst, 1);
+  list_delete(&lst, 5);
+  list_dump(&lst);
+  printf("%zu\n", find_phys_indx(&lst, 4));
+  quick_list_sort(&lst);
+  list_dump(&lst);
+  list_insert(&lst, 2, 30);
+  list_insert(&lst, 3, 40);
+  list_dump(&lst);
+  list_insert(&lst, 4, 60);
+  list_insert(&lst, 2, 50);
+  list_insert(&lst, 2, 55);
+  list_insert(&lst, 0, 10);
+  list_insert(&lst, 1, 20);
+  list_insert(&lst, 2, 30);
+  list_insert(&lst, 3, 40);
+  list_insert(&lst, 4, 60);
+  list_insert(&lst, 2, 50);
+  list_insert(&lst, 2, 55);
+  list_insert(&lst, 0, 10);
+  list_insert(&lst, 1, 20);
+  list_insert(&lst, 2, 30);
+  list_insert(&lst, 3, 40);
+  list_insert(&lst, 4, 60);
+  list_insert(&lst, 2, 50);
+  list_insert(&lst, 2, 55);
+  list_insert(&lst, 0, 10);
+  list_insert(&lst, 1, 20);
+  list_insert(&lst, 2, 30);
+  list_insert(&lst, 3, 40);
+  list_insert(&lst, 4, 60);
+  list_insert(&lst, 2, 50);
+  list_insert(&lst, 2, 55);
+  list_insert(&lst, 0, 10);
+  list_insert(&lst, 1, 20);
+  list_insert(&lst, 2, 30);
+  list_insert(&lst, 3, 40);
+  list_insert(&lst, 4, 60);
+  list_sort(&lst);
+  list_dump(&lst);
+  list_delete(&lst, 37);
+  list_delete(&lst, 36);
+  list_delete(&lst, 35);
+  list_delete(&lst, 34);
+  list_delete(&lst, 33);
+  list_delete(&lst, 32);
+  list_delete(&lst, 31);
+  list_delete(&lst, 30);
+  list_delete(&lst, 29);
+  list_delete(&lst, 28);
+  list_delete(&lst, 27);
+  list_delete(&lst, 26);
+  list_delete(&lst, 25);
+  list_delete(&lst, 24);
+  list_delete(&lst, 23);
+  list_delete(&lst, 22);
+  list_delete(&lst, 21);
+  list_delete(&lst, 20);
+  list_delete(&lst, 19);
+  list_dump(&lst);
+  list_dump(&lst);
+  list_insert(&lst, 3, 88);
+  list_dump(&lst);
+  int a = list_delete(&lst, 4);
+  printf("a is %d\n", a);
+  list_dump(&lst);
+  return 0;
+}
